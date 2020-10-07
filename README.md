@@ -23,4 +23,4 @@ Você deverá criar uma feature de controle de estoque.
 - Todos os endpoints dessa API devem estar funcionando adequadamente.
 - Você tem total liberdade para fazer qualquer alteração no projeto que achar pertinente, desde que ele continue atendendo aos objetivos principais da API.
 
-# Como execução a API
+# Implementação de features da API
