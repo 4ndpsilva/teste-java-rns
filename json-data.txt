@@ -1,0 +1,149 @@
+FILIAL - INCLUSÃO/ALTERAÇÃO
+
+REQUISIÇÃO
+
+{
+    "razaoSocial": "Galpão de estocagem de produtos LTDA",
+    "cnpj": "83.230.227/0001-50",
+    "endereco": "Rua Teste Galpão 187, São Paulo - SP",
+    "tipoFilial": "DEPOSITO"
+}
+
+RESPOSTA
+
+{
+	"id": 1,
+    "razaoSocial": "Galpão de estocagem de produtos LTDA",
+    "cnpj": "83.230.227/0001-50",
+    "endereco": "Rua Teste Galpão 187, São Paulo - SP",
+    "tipoFilial": "DEPOSITO"
+}
+-----------------------------------------------------------------------------------------
+
+
+PRODUTO - INCLUSÃO/ALTERAÇÃO
+
+REQUISIÇÃO
+
+{
+    "id": "codigo",
+    "produtoId": "Cod-Produto-1000"
+}
+
+RESPOSTA
+
+{
+    "id": "codigo",
+    "produtoId": "Cod-Produto-1000"
+}
+-----------------------------------------------------------------------------------------
+
+
+ESTOCAGEM - INCLUSÃO/ALTERAÇÃO
+
+REQUISIÇÃO
+
+{
+    "filialId": 3,
+    "produtoId": "Cod-Produto-1",
+    "quantidade": 50
+}
+
+RESPOSTA
+
+{
+    "filialId": 3,
+    "produtoId": "Cod-Produto-1",
+    "quantidade": 50
+}
+-----------------------------------------------------------------------------------------
+
+
+TRANSFERÊNCIA DE PRODUTOS
+
+REQUISIÇÃO
+
+{
+    "filialOrigemId": 1,
+    "filialDestinoId": 3,
+    "produtoId": "Cod-Produto-2"
+}
+
+RESPOSTA
+
+{
+    "id": 2,
+    "filial": {
+        "id": 3,
+        "razaoSocial": "Loja Rio de Janeiro LTDA",
+        "cnpj": "50.935.855/0001-82",
+        "endereco": "Av. Barata Ribeiro, 199, Rio de Janeiro - RJ",
+        "tipoFilial": "LOJA_PF"
+    },
+    "produto": {
+        "id": "Cod-Produto-2",
+        "nome": "Sal produto 2"
+    },
+    "quantidade": 84
+}
+-----------------------------------------------------------------------------------------
+
+
+PRODUTOS ESTOCADOS
+
+RESPOSTA
+
+[
+    {
+        "id": "Cod-Produto-1",
+        "nome": "Sal produto 1",
+        "filial": "Galpão de estocagem de produtos LTDA",
+        "cnpj": "83.230.227/0001-50",
+        "tipoFilial": "Depósito",
+        "local": "Rua Teste Galpão 187, São Paulo - SP",
+        "quantidade": 47
+    },
+    {
+        "id": "Cod-Produto-2",
+        "nome": "Sal produto 2",
+        "filial": "Galpão de estocagem de produtos LTDA",
+        "cnpj": "83.230.227/0001-50",
+        "tipoFilial": "Depósito",
+        "local": "Rua Teste Galpão 187, São Paulo - SP",
+        "quantidade": 2
+    }
+]
+-----------------------------------------------------------------------------------------
+
+
+JSON DE ERRO RETORNADOS
+
+RESPOSTA
+
+[
+    {
+        "statusCode": 500,
+        "message": "Produto não ser excluído porque está sendo usado na estocagem",
+        "field": null,
+        "occurredAt": "2020-10-07T04:42:35.775"
+    }
+]
+-----------------------------------------------------------------------------------------
+
+
+ENDPOINTS
+
+	FILIAIS
+		GET, POST         - http://localhost:8081/api/filiais
+		GET, PUT E DELETE - http://localhost:8081/api/filiais/1
+	PRODUTOS
+		GET, POST         - http://localhost:8081/api/produtos
+		GET, PUT E DELETE - http://localhost:8081/api/produtos/1
+		
+	ESTOCAGEM
+		GET, POST         - http://localhost:8081/api/estocagem
+		GET, PUT E DELETE - http://localhost:8081/api/estocagem/1
+		GET               - http://localhost:8081/api/estocagem/filial/1
+		GET               - http://localhost:8081/api/estocagem/produto/Cod-Produto-3
+		PUT               - http://localhost:8081/api/estocagem/transferencias
+		GET               - http://localhost:8081/api/estocagem/produtos
