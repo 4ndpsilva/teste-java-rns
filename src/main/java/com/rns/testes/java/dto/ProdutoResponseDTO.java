@@ -9,6 +9,7 @@ public class ProdutoResponseDTO {
 	private String id;
 	private String nome;
 	private String filial;
+	private String cnpj;
 	private String tipoFilial;
 	private String local;
 	private Integer quantidade;

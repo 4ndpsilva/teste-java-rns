@@ -76,6 +76,7 @@ public class EstocagemController extends AbstractController<Estocagem, Estocagem
     		produto.setId(e.getProduto().getId());
     		produto.setNome(e.getProduto().getNome());
     		produto.setFilial(e.getFilial().getRazaoSocial());
+    		produto.setCnpj(e.getFilial().getCnpj());
     		produto.setTipoFilial(e.getFilial().getTipoFilial().getDescricao());
     		produto.setLocal(e.getFilial().getEndereco());
     		produto.setQuantidade(e.getQuantidade());

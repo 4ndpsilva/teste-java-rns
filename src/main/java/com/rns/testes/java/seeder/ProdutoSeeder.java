@@ -33,6 +33,6 @@ public class ProdutoSeeder {
     private void criarProdutos() {
     	LongStream
     		.range(1, 26)
-    		.forEach(i -> service.save(new Produto("Cod-Produto-"+i, "Sal produto " +i)));
+    		.forEach(i -> service.save(new Produto("Cod-Produto-"+i, "Produto " +i)));
     }
 }
