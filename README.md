@@ -22,3 +22,5 @@ Você deverá criar uma feature de controle de estoque.
 - Deve existir um endpoint que permita a transferência de um produto de uma filial para outra.
 - Todos os endpoints dessa API devem estar funcionando adequadamente.
 - Você tem total liberdade para fazer qualquer alteração no projeto que achar pertinente, desde que ele continue atendendo aos objetivos principais da API.
+
+# Como execução a API
