@@ -32,4 +32,4 @@ Você deverá criar uma feature de controle de estoque.
 
 ## Arquivo json-data.txt
 
-O arquivo json-data.txt contém todas as URLs dos endpoint e os objetos de requisição e resposta. 
+O arquivo json-data.txt contém todas as URLs dos endpoint e os objetos de requisição e resposta para utilização. 
