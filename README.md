@@ -23,9 +23,15 @@ Você deverá criar uma feature de controle de estoque.
 - Todos os endpoints dessa API devem estar funcionando adequadamente.
 - Você tem total liberdade para fazer qualquer alteração no projeto que achar pertinente, desde que ele continue atendendo aos objetivos principais da API.
 
-# Instruções de execução da API
+# Implementações das features da API
+
+## Como executar a API
+
+### Requisitos Mínimos
+
+- Ter a versão 8 ou superior da Java Virtual Machine instalada.
+- Executar o comando **java -jar controle-estoque-api.jar**.
 
 ### Arquivo json-data.txt
 
-Você deverá criar uma feature de controle de estoque. 
-- A entidade que será responsável pelo controle de estoque deve relacionar produtos com filial e indicar a quantidade de itens disponível para esse produto.
+O arquivo json-data.txt contém todas as URLs dos endpoint e os objetos de requisição e resposta. 
